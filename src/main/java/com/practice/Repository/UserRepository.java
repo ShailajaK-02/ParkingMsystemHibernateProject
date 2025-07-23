@@ -15,7 +15,7 @@ public class UserRepository {
 		
 		System.out.println("Enter Id : ");
 		int id = sc.nextInt();
-		
+
 		System.out.println("Enter your name : ");
 		String name = sc.next();
 		
@@ -110,7 +110,7 @@ public class UserRepository {
 		System.out.println("User with ID " + id + " Data Deleted ");
 	}
 	
-	//Update the data 
+	//update data
 	public void updateData(Scanner sc) {
 		
 		System.out.println("Enter the ID of user whose data you want to update ? ");
@@ -121,6 +121,7 @@ public class UserRepository {
 		Transaction transaction = session.beginTransaction();
 		
 		UserDetails updateId= session.find(UserDetails.class, id);
+		
 		System.out.println("Enter new Updated name : ");
 		String name = sc.next();
 		
